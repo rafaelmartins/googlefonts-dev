@@ -28,7 +28,7 @@ def download_css(url):
 def download_font(url, fname):
     print('Downloading font:', url, '->', 'fonts/%s' % fname)
     r = requests.get(url)
-    r.raise_for_status
+    r.raise_for_status()
     dest_file = os.path.join('fonts', fname)
     if not os.path.isdir('fonts'):
         os.makedirs('fonts')
